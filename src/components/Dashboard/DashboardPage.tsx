@@ -101,7 +101,7 @@ const DashboardPage: React.FC = () => {
       </div>
 
       {/* Recent Activity */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+      <div className="bg-green-100 rounded-lg shadow-sm border border-gray-200 p-6">
         <h3 className="text-lg font-semibold text-gray-800 mb-4">Recent Activity</h3>
         <div className="space-y-4">
           {contributions.slice(-5).map((contribution, index) => {

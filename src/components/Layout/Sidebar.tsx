@@ -66,7 +66,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentPage, setCurrentPage, isOpen, 
                 className={`w-full flex items-center px-6 py-3 text-left transition-colors duration-200 ${
                   currentPage === item.id
                     ? 'bg-orange-600 text-white border-r-4 border-orange-800'
-                    : 'text-white hover:bg-gray-50 hover:text-green-400'
+                    : 'text-white hover:bg-gray-50  hover:text-green-400'
                 }`}
               >
                 <Icon size={20} className="mr-3" />

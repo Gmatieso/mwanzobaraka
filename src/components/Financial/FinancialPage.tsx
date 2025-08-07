@@ -141,7 +141,7 @@ const FinancialPage: React.FC = () => {
       </div>
 
       {/* Member Dividends */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+      <div className="bg-green-100 rounded-lg shadow-sm border border-gray-200 p-6">
         <h3 className="text-lg font-semibold text-gray-800 mb-4">Member Dividend Distribution</h3>
         <div className="overflow-x-auto">
           <table className="w-full">
