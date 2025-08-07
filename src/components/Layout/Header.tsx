@@ -10,7 +10,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-green-700 shadow-sm border-b border-gray-200 px-6 py-4">
+    <header className="bg-green-800 shadow-sm border-b border-gray-200 px-6 py-4">
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-100">Welcome back, {currentUser?.name}</h1>
