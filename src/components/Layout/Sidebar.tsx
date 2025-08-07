@@ -45,12 +45,12 @@ const Sidebar: React.FC<SidebarProps> = ({ currentPage, setCurrentPage, isOpen, 
       </button>
 
       {/* Sidebar */}
-      <div className={`fixed inset-y-0 left-0 z-40 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
+      <div className={`fixed inset-y-0 left-0 z-40 w-64 bg-green-700 shadow-lg transform transition-transform duration-300 ease-in-out ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } lg:translate-x-0`}>
         <div className="p-6 border-b border-gray-200">
-          <h2 className="text-xl font-bold text-gray-800">Mwanzo Baraka</h2>
-          <p className="text-sm text-gray-600">Financial Management</p>
+          <h2 className="text-xl font-bold text-white">Mwanzo Baraka</h2>
+          <p className="text-sm text-gray-50">Financial Management</p>
         </div>
 
         <nav className="mt-6">
@@ -66,7 +66,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentPage, setCurrentPage, isOpen, 
                 className={`w-full flex items-center px-6 py-3 text-left transition-colors duration-200 ${
                   currentPage === item.id
                     ? 'bg-orange-600 text-white border-r-4 border-orange-800'
-                    : 'text-gray-600 hover:bg-gray-50 hover:text-orange-600'
+                    : 'text-white hover:bg-gray-50 hover:text-green-400'
                 }`}
               >
                 <Icon size={20} className="mr-3" />
@@ -82,8 +82,8 @@ const Sidebar: React.FC<SidebarProps> = ({ currentPage, setCurrentPage, isOpen, 
               {currentUser?.name.charAt(0)}
             </div>
             <div className="ml-3">
-              <p className="text-sm font-medium text-gray-800">{currentUser?.name}</p>
-              <p className="text-xs text-gray-500 capitalize">{currentUser?.role}</p>
+              <p className="text-sm font-medium text-gray-100">{currentUser?.name}</p>
+              <p className="text-xs text-gray-100 capitalize">{currentUser?.role}</p>
             </div>
           </div>
         </div>
