@@ -8,7 +8,7 @@ interface MemberRegistrationFormProps {
 
 const MemberRegistrationForm: React.FC<MemberRegistrationFormProps> = ({ onClose }) => {
   const { members, setMembers, groups, setGroups } = useApp();
-  const [registrationType, setRegistrationType] = useState<'individual' | 'group'>('individual');
+  const [registrationType, setRegistrationType] = useState<'individual' | 'group' | 'user'>('individual');
   const [formData, setFormData] = useState({
     name: '',
     idNumber: '',
@@ -113,8 +113,19 @@ const MemberRegistrationForm: React.FC<MemberRegistrationFormProps> = ({ onClose
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Registration Type */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">Registration Type</label>
+          <label className="block text-sm font-bold text-gray-700 mb-2">Registration Type</label>
           <div className="flex space-x-4">
+            <button
+                type="button"
+                onClick={() => setRegistrationType('user')}
+                className={`px-4 py-2 rounded-lg border-2 transition-colors ${
+                    registrationType === 'user'
+                        ? 'border-orange-600 bg-orange-50 text-orange-700'
+                        : 'border-gray-300 hover:border-gray-400'
+                }`}
+            >
+              User Registration
+            </button>
             <button
               type="button"
               onClick={() => setRegistrationType('individual')}
@@ -145,7 +156,7 @@ const MemberRegistrationForm: React.FC<MemberRegistrationFormProps> = ({ onClose
           <div className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
                 <input
                   type="text"
                   required
@@ -155,7 +166,7 @@ const MemberRegistrationForm: React.FC<MemberRegistrationFormProps> = ({ onClose
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">ID Number</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Second Name</label>
                 <input
                   type="text"
                   required
@@ -190,17 +201,6 @@ const MemberRegistrationForm: React.FC<MemberRegistrationFormProps> = ({ onClose
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Address</label>
-              <textarea
-                required
-                value={formData.address}
-                onChange={(e) => handleInputChange('address', e.target.value)}
-                rows={3}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-              />
-            </div>
-
-            <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Monthly Contribution (KSh)</label>
               <input
                 type="number"
@@ -221,8 +221,8 @@ const MemberRegistrationForm: React.FC<MemberRegistrationFormProps> = ({ onClose
         ) : (
           // Group Registration Form
           <div className="space-y-6">
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-              <h4 className="font-medium text-blue-800 mb-2">Group Information</h4>
+            <div className="bg-blue-50  border border-blue-200 rounded-lg p-4">
+              <h4 className="font-boldtext-gray-700 mb-2">Group Information</h4>
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Group Name</label>
@@ -263,7 +263,7 @@ const MemberRegistrationForm: React.FC<MemberRegistrationFormProps> = ({ onClose
                 <button
                   type="button"
                   onClick={addGroupMember}
-                  className="text-sm bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-lg transition-colors"
+                  className="text-sm bg-green-600 hover:bg-green-700 font-bold text-white px-3 py-1 rounded-lg transition-colors"
                 >
                   Add Member
                 </button>
@@ -283,10 +283,10 @@ const MemberRegistrationForm: React.FC<MemberRegistrationFormProps> = ({ onClose
                       </button>
                     )}
                   </div>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
                       <input
                         type="text"
                         required
@@ -296,7 +296,7 @@ const MemberRegistrationForm: React.FC<MemberRegistrationFormProps> = ({ onClose
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">ID Number</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
                       <input
                         type="text"
                         required
@@ -326,18 +326,7 @@ const MemberRegistrationForm: React.FC<MemberRegistrationFormProps> = ({ onClose
                       />
                     </div>
                   </div>
-                  
-                  <div className="mt-4">
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Address</label>
-                    <textarea
-                      required
-                      value={member.address}
-                      onChange={(e) => handleGroupMemberChange(index, 'address', e.target.value)}
-                      rows={2}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                    />
-                  </div>
-                  
+
                   <div className="mt-4">
                     <label className="block text-sm font-medium text-gray-700 mb-1">Monthly Contribution (KSh)</label>
                     <input

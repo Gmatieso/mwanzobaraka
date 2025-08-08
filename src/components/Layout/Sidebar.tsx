@@ -51,7 +51,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentPage, setCurrentPage, isOpen, 
       } lg:translate-x-0`}>
         <div className="p-6 border-b border-gray-200">
           <img src={logo} alt="Mwanzo Baraka Logo" className="w-12 h-12" />
-          <p className="text-sm text-gray-50">Financial Management</p>
+          <p className="text-sm font-bold text-gray-50">Financial Management</p>
         </div>
 
         <nav className="mt-6">
