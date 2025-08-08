@@ -43,14 +43,14 @@ const Sidebar: React.FC<SidebarProps> = ({ currentPage, setCurrentPage, isOpen, 
         className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-orange-600 text-white rounded-lg shadow-lg"
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>F
+      </button>
 
       {/* Sidebar */}
       <div className={`fixed inset-y-0 left-0 z-40 w-64 bg-green-900 shadow-lg transform transition-transform duration-300 ease-in-out ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } lg:translate-x-0`}>
         <div className="p-6 border-b border-gray-200">
-          <img src={logo} alt="Mwanzo Baraka Logo" className="w-12 h-12  mb-4" />
+          <img src={logo} alt="Mwanzo Baraka Logo" className="w-12 h-12" />
           <p className="text-sm text-gray-50">Financial Management</p>
         </div>
 
@@ -67,7 +67,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentPage, setCurrentPage, isOpen, 
                 className={`w-full flex items-center px-6 py-3 text-left transition-colors duration-200 ${
                   currentPage === item.id
                     ? 'bg-orange-600 text-white border-r-4 border-orange-800'
-                    : 'text-white hover:bg-gray-50  hover:text-green-400'
+                    : 'text-white hover:bg-gray-50 hover:text-green-400'
                 }`}
               >
                 <Icon size={20} className="mr-3" />
