@@ -13,7 +13,7 @@ const Header: React.FC = () => {
     <header className="bg-green-800 shadow-sm border-b border-gray-200 px-6 py-4">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-gray-100">Karibu Tena, {currentUser?.name}</h1>
+          <h1 className="text-2xl font-bold text-gray-100">Jambo, {currentUser?.name}</h1>
           <p className="text-sm text-gray-100">Here's what's happening with your organization today.</p>
         </div>
 
