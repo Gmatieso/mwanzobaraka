@@ -1,11 +1,14 @@
-# Mwanzo Baraka Frontend
+#### <br>👷‍♂️ WORK IN PROGRESS 👩‍🏭</br>
+![Work in Progress](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGp4eW9zbWdzNGdwcGNuYW4ybWszNnBodDVpNmt5bHNsZ2MzdWp3MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mCVBZCxLNXvakHj1cN/giphy.gif)
+
+#### Mwanzo Baraka Frontend
 
 Mwanzo Baraka Frontend is the client-side application for the Mwanzo Baraka system.  
 It is **scaffolded with Vite**, built using **React** for UI rendering, and styled with **Tailwind CSS** for rapid, utility-first design.
 
 ---
 
-## 🚀 Tech Stack
+#### 🚀 Tech Stack
 
 - **Vite** – Fast build tool and development server
 - **React** – Component-based UI library
@@ -15,9 +18,9 @@ It is **scaffolded with Vite**, built using **React** for UI rendering, and styl
 
 ---
 
-## 📦 Project Setup
+#### 📦 Project Setup
 
-### 1️⃣ Prerequisites
+#### 1️⃣ Prerequisites
 
 Ensure you have the following installed:
 
@@ -27,7 +30,7 @@ Ensure you have the following installed:
 
 ---
 
-### 2️⃣ Clone the Repository
+#### 2️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/mwanzo-baraka-frontend.git
